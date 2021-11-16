@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace ITMD419518.F2C
+namespace ITT.ITMD419519
 {
     public static class F2C
     {
