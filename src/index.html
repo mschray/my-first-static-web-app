@@ -11,8 +11,8 @@
     $(document).ready(function() {
         $("#submittemp").click(function() {
             let temp = Number($("#inputtemp").val());
-            let convertedTemp = (temp - 32) * 5 / 9;
-            $("#msg").html(`The Fahrenheit temperature of ${temp} is ${convertedTemp} in Celsius`);
+            //            let convertedTemp = (temp - 32) * 5 / 9;
+
 
             let url = "";
             //`http://localhost:7071/api/F2C?temp=${temp}
@@ -25,8 +25,9 @@
             }
 
             $.get(url, function(data) {
-                $("#msg").html(data);
-                alert("Load was performed.");
+                //$("#msg").html(data);
+                $("#msg").html(`The Fahrenheit temperature of ${temp} is ${data} in Celsius`);
+                //alert("Load was performed.");
             });
 
 
