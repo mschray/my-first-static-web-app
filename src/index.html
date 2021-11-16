@@ -14,7 +14,17 @@
             let convertedTemp = (temp - 32) * 5 / 9;
             $("#msg").html(`The Fahrenheit temperature of ${temp} is ${convertedTemp} in Celsius`);
 
-            $.get(`/api/F2C?temp=${temp}`, function(data) {
+            let url = "";
+            //`http://localhost:7071/api/F2C?temp=${temp}
+            //
+            //
+            if (window.location.origin == "file://") {
+                url = `http://localhost:7071/api/F2C?temp=${temp}`;
+            } else {
+                url = `/api/F2C?temp=${temp}`;
+            }
+
+            $.get(url, function(data) {
                 $("#msg").html(data);
                 alert("Load was performed.");
             });
