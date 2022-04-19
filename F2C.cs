@@ -29,7 +29,7 @@ namespace ITT.ITMD419519
             var convertedTemp = (tempAsNumber - 32) * 5 / 9;
 
             string responseMessage = string.IsNullOrEmpty(temp)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+                ? "This HTTP triggered function executed successfully. Pass 'temp' in the query string or in the request body for a personalized response."
                 : $"{convertedTemp}";
 
             return new OkObjectResult(responseMessage);
