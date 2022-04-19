@@ -1,0 +1,1 @@
+swa start --app-location src --api-location .  --open --func-args --csharp
